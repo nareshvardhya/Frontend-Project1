@@ -1,0 +1,64 @@
+<!-- <h1>employee-list works!</h1> -->
+<h2>Employee-List</h2>
+<!-- <ul>
+    
+@for(emp of employees; track emp.id){
+
+  <li>Name: {{emp.Name}}</li>
+
+}
+</ul> -->     
+
+<button routerLink="/add">
+  Add Employee
+</button>
+<hr>    
+ 
+<table border="1" width="100%" cellpadding="10">
+
+  <thead>
+
+    <tr> 
+      <th>ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>DOB</th>
+      <th>Age</th>
+    </tr>   
+ 
+  </thead>   
+ 
+  <tbody>   
+ 
+    <!-- @for(emp of employees; track emp.id){ } -->
+
+      <tr *ngFor="let emp of employees">    
+ 
+        <td>{{emp.id}}</td>  
+        <td>{{emp.Name}}</td>
+        <td>{{emp.Email}}</td>
+        <td>{{emp.Phone}}</td> 
+        <td>{{emp.DOB}}</td> 
+        <td>{{emp.Age}}</td>
+
+        <td>         
+    
+          <button [routerLink]="['/edit',emp.id]">
+            Edit
+          </button>
+
+          <button (click)="deleteEmployee(emp.id)">
+            Delete
+          </button>
+
+        </td>
+
+      </tr>
+
+    
+
+
+  </tbody>
+
+</table>

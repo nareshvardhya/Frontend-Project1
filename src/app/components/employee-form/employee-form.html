@@ -1,0 +1,25 @@
+<p>employee-form works!</p>
+<h1>Add new Employee</h1> 
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+
+  <br>
+
+  <input type="text" placeholder="Enter Name" formControlName="name">
+
+  <br><br>
+
+  <input type="email" placeholder="Enter Email" formControlName="email">
+
+  <br><br>
+ 
+  <input type="text" placeholder="Enter Phone" formControlName="phone">
+
+  <br><br>
+ 
+  <input type="date" formControlName="dob">
+
+  <br><br>
+
+  <button type="submit">Save Employee</button>
+
+</form> 
